@@ -191,9 +191,13 @@
 				var hurdle = getHurdle();
 				hurdles.push(hurdle);
 			} 
-
+			var grad = ctx.createLinearGradient(0,0,0,250,0,300)
+			grad.addColorStop(0,'#87CEEB')
+			grad.addColorStop(0.5,'#fff')
+			grad.addColorStop(0.8,'#9b7653')
 			//Clear all backgroud to white
-			ctx.fillStyle = "#ffffff";
+			//ctx.fillStyle = "#ffffff";
+			ctx.fillStyle = grad
 			ctx.fillRect(0, 0, width, height);
 
 			ctx.font = "30px Arial";
